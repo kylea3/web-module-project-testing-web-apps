@@ -67,6 +67,7 @@ test('renders all fields text when all fields are submitted.', async () => {
     userEvent.type(screen.getByPlaceholderText('Edd'), 'Marcus');
     userEvent.type(screen.getByPlaceholderText('Burke'), 'Stephens');
     userEvent.type(screen.getByPlaceholderText('bluebill1049@hotmail.com'), 'kyle@kyle.com');
+    userEvent.type(screen.getByLabelText('Message'), 'kyle@kyle.com');
     userEvent.click(screen.getByText(/submit/i));
     expect(screen.getByTestId('firstnameDisplay')).toBeInTheDocument();
     expect(screen.getByTestId('lastnameDisplay')).toBeInTheDocument();
